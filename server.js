@@ -1,8 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const { mongoURI, PORT } = require('./config')
+const app = require('./app.js');
 
-const app = express()
 
 
 mongoose.connect(mongoURI).then(() => {
@@ -15,3 +15,4 @@ mongoose.connect(mongoURI).then(() => {
 app.listen(PORT, () => {
     console.log(`server is running on the port: ${PORT}`)
 })
+

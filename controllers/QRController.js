@@ -1,9 +1,9 @@
 const catchAsyncError = require("../middleware/catchAsyncError");
-const ErrorHandler = require("../utils/errorHanlder");
 const QRCode = require('qrcode');
 const { createCanvas, loadImage } = require('canvas');
 
 exports.generateQRCode = catchAsyncError(async (req, res) => {
+    
     const { link } = req.body; 
 
     if (typeof link === 'string' && link.trim() !== '') {
